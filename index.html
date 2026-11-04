@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>开说工作台</title>
+<meta name="theme-color" content="#111114">
+<link rel="icon" href="favicon.svg">
+<style>
+  :root { color-scheme: dark; }
+  html,body{height:100%;margin:0}
+  body{display:flex;align-items:center;justify-content:center;background:#111114;color:#e8e8ee;
+       font:15px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+  .box{text-align:center;padding:24px}
+  .dot{width:34px;height:34px;margin:0 auto 18px;border-radius:50%;
+       border:3px solid rgba(255,255,255,.16);border-top-color:#7c6cf0;animation:spin .8s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  a{color:#9d92ff}
+  .tip{font-size:13px;color:#8b8b96;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="dot"></div>
+  <div>正在打开「开说工作台」…</div>
+  <div class="tip"><a id="m" href="#">没有自动跳转？点这里</a></div>
+</div>
+<script>
+var T = 'https://growth-system-d0gxeo4y4ad058f46-1342558186.tcloudbaseapp.com/kaishuo/%E5%BC%80%E8%AF%B4%E5%B7%A5%E4%BD%9C%E5%8F%B0.html';
+var u = T + (location.search || '') + (location.hash || '');
+document.getElementById('m').href = u;
+location.replace(u);
+</script>
+</body>
+</html>
